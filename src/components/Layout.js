@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     box-sizing: border-box; 
     margin: 0;
-    font-family: Cabin, 'Open Sans', sans-serif;
+    font-family: Montserrat, 'Open Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
   }
@@ -37,7 +37,7 @@ const theme = {
   ...preset,
   colors,
   fonts: {
-    body: 'Cabin, Open Sans, sans-serif',
+    body: 'Montserrat, Open Sans, sans-serif',
     heading: 'inherit',
     monospace: 'monospace',
   },

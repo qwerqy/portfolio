@@ -6,43 +6,43 @@ import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import MouseIcon from '../components/MouseIcon';
-import Triangle from '../components/Triangle';
+// import Triangle from '../components/Triangle';
 
-const Background = () => (
-  <div>
-    <Triangle
-      color="backgroundDark"
-      height={['35vh', '80vh']}
-      width={['95vw', '60vw']}
-    />
+// const Background = () => (
+//   <div>
+//     <Triangle
+//       color="backgroundDark"
+//       height={['35vh', '80vh']}
+//       width={['95vw', '60vw']}
+//     />
 
-    <Triangle
-      color="secondary"
-      height={['38vh', '80vh']}
-      width={['50vw', '35vw']}
-    />
+//     <Triangle
+//       color="secondary"
+//       height={['38vh', '80vh']}
+//       width={['50vw', '35vw']}
+//     />
 
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '35vh']}
-      width={['75vw', '60vw']}
-      invertX
-    />
+//     <Triangle
+//       color="primaryDark"
+//       height={['25vh', '35vh']}
+//       width={['75vw', '60vw']}
+//       invertX
+//     />
 
-    <Triangle
-      color="backgroundDark"
-      height={['20vh', '20vh']}
-      width={['100vw', '100vw']}
-      invertX
-      invertY
-    />
-  </div>
-);
+//     <Triangle
+//       color="backgroundDark"
+//       height={['20vh', '20vh']}
+//       width={['100vw', '100vw']}
+//       invertX
+//       invertY
+//     />
+//   </div>
+// );
 
 const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
 const LandingPage = () => (
-  <Section.Container id="home" Background={Background}>
+  <Section.Container id="home">
     <StaticQuery
       query={graphql`
         query SiteTitleQuery {
@@ -73,8 +73,8 @@ const LandingPage = () => (
               textAlign="center"
               as="h1"
               color="primary"
-              fontSize={[6, 7]}
-              mb={[3, 4, 5]}
+              fontSize={[5, 6]}
+              mb={[1, 2, 3]}
             >
               {`Hello, I'm ${name}!`}
             </Heading>
@@ -82,8 +82,8 @@ const LandingPage = () => (
             <Heading
               as="h2"
               color="primary"
-              fontSize={[5, 6]}
-              mb={[3, 5]}
+              fontSize={[4, 5]}
+              mb={[1, 3]}
               textAlign="center"
               style={centerHorizontally}
             >

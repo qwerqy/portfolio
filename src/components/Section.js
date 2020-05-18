@@ -38,10 +38,10 @@ Container.propTypes = {
   Background: PropTypes.func,
 };
 
-const Header = ({ name, icon = '', label = '' }) => (
+const Header = ({ name, icon = '', label = '', extendLine = false }) => (
   <Slide left>
-    <Heading color="secondaryDark" mb={4}>
-      <LinkAnimated selected>
+    <Heading fontSize={['20px', '24px']} color="secondaryDark" mb={4}>
+      <LinkAnimated selected extendLine={extendLine}>
         {name}
         {icon && (
           <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
@@ -57,6 +57,7 @@ Header.propTypes = {
   name: PropTypes.string.isRequired,
   icon: PropTypes.string,
   label: PropTypes.string,
+  extendLine: PropTypes.bool,
 };
 
 export default {

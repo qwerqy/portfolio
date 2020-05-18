@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-mate",
-  "version": "2.5.2",
-  "description": "Gatsby v2 starter to create a top notch portfolio!",
+  "name": "portfolio",
+  "version": "4.0",
+  "description": "Amin Roslan's magnificent portfolio!",
   "main": "index.js",
   "scripts": {
     "build": "gatsby clean && gatsby build",

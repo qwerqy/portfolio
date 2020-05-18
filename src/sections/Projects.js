@@ -7,42 +7,42 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import { CardContainer, Card } from '../components/Card';
 import SocialLink from '../components/SocialLink';
-import Triangle from '../components/Triangle';
+// import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
 import Hide from '../components/Hide';
 
-const Background = () => (
-  <div>
-    <Triangle
-      color="secondaryLight"
-      height={['80vh', '80vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
+// const Background = () => (
+//   <div>
+//     <Triangle
+//       color="secondaryLight"
+//       height={['80vh', '80vh']}
+//       width={['100vw', '100vw']}
+//       invertX
+//     />
 
-    <Triangle
-      color="background"
-      height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
-      invertX
-    />
+//     <Triangle
+//       color="background"
+//       height={['50vh', '20vh']}
+//       width={['50vw', '50vw']}
+//       invertX
+//     />
 
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '40vh']}
-      width={['75vw', '60vw']}
-      invertX
-      invertY
-    />
+//     <Triangle
+//       color="primaryDark"
+//       height={['25vh', '40vh']}
+//       width={['75vw', '60vw']}
+//       invertX
+//       invertY
+//     />
 
-    <Triangle
-      color="backgroundDark"
-      height={['25vh', '20vh']}
-      width={['100vw', '100vw']}
-      invertY
-    />
-  </div>
-);
+//     <Triangle
+//       color="backgroundDark"
+//       height={['25vh', '20vh']}
+//       width={['100vw', '100vw']}
+//       invertY
+//     />
+//   </div>
+// );
 
 const CARD_HEIGHT = '200px';
 
@@ -176,8 +176,8 @@ Project.propTypes = {
 };
 
 const Projects = () => (
-  <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+  <Section.Container id="projects">
+    <Section.Header name="PROJECTS" icon="💻" label="notebook" extendLine />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
