@@ -43,6 +43,7 @@ const Header = () => (
         justifyContent="space-between"
         alignItems="center"
         p={3}
+        width="100vw"
       >
         <SectionLinks>
           {({ allLinks }) => {
