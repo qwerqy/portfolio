@@ -66,13 +66,13 @@ const Helmet = ({ theme = {} }) => (
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href={`https:${profile.favicon32.src}`}
+            href={`https:${profile.favicon32.src}?v2`}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href={`https:${profile.favicon16.src}`}
+            href={`https:${profile.favicon16.src}?v2`}
           />
         </ReactHelmet>
       );
