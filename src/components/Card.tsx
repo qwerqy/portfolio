@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled, { StyledComponent } from 'styled-components';
 import { Card as CardRebass } from 'rebass/styled-components';
 
-export const CardContainer = styled.div`
+export const CardContainer: StyledComponent<any, any, any> = styled.div`
   display: grid;
   grid-gap: 30px;
 
   grid-template-columns: repeat(
     auto-fill,
-    minmax(${(props) => props.minWidth}, 1fr)
+    minmax(${(props: any) => props.minWidth}, 1fr)
   );
   justify-items: center;
 

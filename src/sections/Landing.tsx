@@ -56,16 +56,10 @@ const LandingPage = () => (
               fontAwesomeIcon
             }
           }
-          site {
-            siteMetadata {
-              deterministicBehaviour
-            }
-          }
         }
       `}
       render={({ contentfulAbout, site }) => {
         const { name, socialLinks, roles } = contentfulAbout;
-        const { deterministicBehaviour } = site.siteMetadata;
 
         return (
           <Fragment>
@@ -89,7 +83,7 @@ const LandingPage = () => (
             >
               <TextLoop interval={5000}>
                 {roles
-                  .sort(() => deterministicBehaviour || Math.random() - 0.5)
+                  .sort(() => Math.random() - 0.5)
                   .map((text) => (
                     <Text width={[300, 500]} key={text}>
                       {text}
