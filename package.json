@@ -41,6 +41,7 @@
     "react-headroom": "^3.0.0",
     "react-helmet": "^6.0.0",
     "react-markdown": "^4.3.1",
+    "react-particles-js": "^3.5.3",
     "react-reveal": "^1.2.2",
     "react-scroll-section": "^2.0.0",
     "react-text-loop": "^2.0.1",
@@ -68,7 +69,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
-    "start-server-and-test": "^1.11.0"
+    "start-server-and-test": "^1.11.0",
+    "tsparticles": "^1.31.1"
   },
   "husky": {
     "hooks": {
