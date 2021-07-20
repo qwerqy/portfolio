@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { StyledComponent } from 'styled-components';
 
 const breakpoints = {
   xs: '@media screen and (max-width: 40em)',
@@ -7,7 +7,7 @@ const breakpoints = {
   lg: '@media screen and (min-width: 64em)',
 };
 
-const hidden = key => props =>
+const hidden = (key) => (props) =>
   props[key] && {
     [breakpoints[key]]: {
       display: 'none',
@@ -19,13 +19,20 @@ const sm = hidden('sm');
 const md = hidden('md');
 const lg = hidden('lg');
 
-const customQuery = props =>
+const customQuery = (props) =>
   props.query && {
     [props.query]: {
       display: 'none',
     },
   };
 
-const Hide = styled.div([], xs, sm, md, lg, customQuery);
+const Hide: StyledComponent<any, any, any> = styled.div(
+  [] as any,
+  xs,
+  sm,
+  md,
+  lg,
+  customQuery,
+);
 
 export default Hide;

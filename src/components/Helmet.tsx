@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Helmet = ({ theme = {} }) => (
+const Helmet = ({ theme }) => (
   <StaticQuery
     query={graphql`
       query HelmetQuery {

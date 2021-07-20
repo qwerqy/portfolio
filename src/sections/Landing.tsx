@@ -6,38 +6,54 @@ import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import MouseIcon from '../components/MouseIcon';
-// import Triangle from '../components/Triangle';
+import Triangle from '../components/Triangle';
+import styled, { StyledComponent } from 'styled-components';
+import Particles from 'react-particles-js';
 
-// const Background = () => (
-//   <div>
-//     <Triangle
-//       color="backgroundDark"
-//       height={['35vh', '80vh']}
-//       width={['95vw', '60vw']}
-//     />
+const StyledBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+`;
 
-//     <Triangle
-//       color="secondary"
-//       height={['38vh', '80vh']}
-//       width={['50vw', '35vw']}
-//     />
-
-//     <Triangle
-//       color="primaryDark"
-//       height={['25vh', '35vh']}
-//       width={['75vw', '60vw']}
-//       invertX
-//     />
-
-//     <Triangle
-//       color="backgroundDark"
-//       height={['20vh', '20vh']}
-//       width={['100vw', '100vw']}
-//       invertX
-//       invertY
-//     />
-//   </div>
-// );
+const Background = () => {
+  return (
+    <StyledBackground>
+      <Particles
+        width="100vw"
+        height="100vh"
+        params={{
+          particles: {
+            color: {
+              value: '#000',
+            },
+            number: {
+              value: 50,
+            },
+            size: {
+              value: 3,
+            },
+            lineLinked: {
+              color: {
+                value: '#000',
+              },
+            },
+          },
+          interactivity: {
+            events: {
+              onhover: {
+                enable: true,
+                mode: 'repulse',
+              },
+            },
+          },
+        }}
+      />
+    </StyledBackground>
+  );
+};
 
 const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
@@ -56,19 +72,14 @@ const LandingPage = () => (
               fontAwesomeIcon
             }
           }
-          site {
-            siteMetadata {
-              deterministicBehaviour
-            }
-          }
         }
       `}
       render={({ contentfulAbout, site }) => {
         const { name, socialLinks, roles } = contentfulAbout;
-        const { deterministicBehaviour } = site.siteMetadata;
 
         return (
           <Fragment>
+            <Background />
             <Heading
               textAlign="center"
               as="h1"
@@ -89,7 +100,7 @@ const LandingPage = () => (
             >
               <TextLoop interval={5000}>
                 {roles
-                  .sort(() => deterministicBehaviour || Math.random() - 0.5)
+                  .sort(() => Math.random() - 0.5)
                   .map((text) => (
                     <Text width={[300, 500]} key={text}>
                       {text}
